@@ -15,6 +15,10 @@ bot_token = getenv("TOKEN")
 api_hash = getenv("HASH") 
 api_id = getenv("ID")
 bot = Client("mybot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
+bot.start()
+
+# Add the following line to export the session string
+print(bot.export_session_string())
 
 ss = getenv("STRING")
 if ss is not None:
